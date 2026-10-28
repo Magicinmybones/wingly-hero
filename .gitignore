@@ -1,0 +1,6 @@
+# Keep source control limited to the client site and its assets.
+*
+!index.html
+!asset/
+!asset/**
+!.gitignore
