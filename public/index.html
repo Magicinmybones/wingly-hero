@@ -94,6 +94,34 @@ svg.e{overflow:visible}
   .g-left{--k:var(--m);order:2}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* First-load foreground sequence. The sky image remains completely still. */
+@keyframes wingly-quiet{
+  from{opacity:0;transform:translate3d(0,8px,0)}
+  to{opacity:1;transform:none}
+}
+@keyframes wingly-type{
+  from{clip-path:inset(0 0 100% 0)}
+  to{clip-path:inset(0 0 0 0)}
+}
+@keyframes wingly-fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+@media (prefers-reduced-motion:no-preference){
+  .g-logo{animation:wingly-quiet .54s cubic-bezier(.22,1,.36,1) .05s backwards}
+  .g-links{animation:wingly-quiet .54s cubic-bezier(.22,1,.36,1) .12s backwards}
+  .g-btn{animation:wingly-quiet .54s cubic-bezier(.22,1,.36,1) .19s backwards}
+  .g-center .h1 .t:nth-of-type(2){animation:wingly-type .76s cubic-bezier(.19,1,.22,1) .25s backwards}
+  .g-center .h1 .t:nth-of-type(3){animation:wingly-type .76s cubic-bezier(.19,1,.22,1) .38s backwards}
+  .g-center > img.hero{animation:wingly-fade .9s cubic-bezier(.22,1,.36,1) .35s backwards}
+  .g-center > img.e:not(.hero){animation:wingly-fade .6s cubic-bezier(.22,1,.36,1) .48s backwards}
+  .g-center > .cta,.g-center > .cta-dot,.g-center > .t,.g-center > svg.e{animation:wingly-fade .6s cubic-bezier(.22,1,.36,1) .9s backwards}
+  .g-tag{animation:wingly-quiet .6s cubic-bezier(.22,1,.36,1) 1.05s backwards}
+  .g-right{animation:wingly-quiet .76s cubic-bezier(.22,1,.36,1) .78s backwards}
+}
+@media (prefers-reduced-motion:no-preference) and (min-aspect-ratio:1/1) and (min-width:1000px) and (min-height:600px){
+  .g-left{animation:wingly-quiet .76s cubic-bezier(.22,1,.36,1) .95s backwards}
+}
 </style>
 </head>
 <body>
