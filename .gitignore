@@ -1,6 +1,6 @@
-# Keep source control limited to the client site and its assets.
+# Include only the deployable site and its Cloudflare config.
 *
-!index.html
-!asset/
-!asset/**
+!public/
+!public/**
+!wrangler.jsonc
 !.gitignore
